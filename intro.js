@@ -6,3 +6,4 @@ menuToggle_intro.addEventListener('click', () => {
     menuToggle_intro.classList.toggle('active')
     showcase_intro.classList.toggle('active')
 })
+document.querySelector('video').playbackRate = 0.75;
