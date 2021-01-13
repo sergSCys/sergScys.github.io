@@ -1,6 +1,13 @@
-/* MASTER STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --overlay-color: #03a9f4
+}
+
+
+/* Portfolio and About me pages: */
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -46,7 +53,7 @@ body {
 
 
 .nav-link-wrapper a:hover {
-    colour: #000000;
+    color: #000000;
 }
 
 .active-nav-link {
@@ -127,4 +134,186 @@ body {
 }
 .profile-content-wrapper h1 {
     color: lightseagreen;
+}
+
+/* Intro Landing Page part: */
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.showcase-intro {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: 0.5s;
+}
+.showcase-intro.active {
+    right: 300px;
+}
+
+.showcase-intro header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-intro {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle-intro {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    background: url("/images/intro/menu-ico.png") no-repeat center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.toggle-intro.active {
+    background-size: 25px;
+    background: url("/images/intro/close.png") no-repeat center;
+}
+
+.showcase-intro video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+.overlay-intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+/* FOLLOWING LINES ADDS FILTER OVER VIDEO */
+    /*background: rgba(0, 0, 0, 0.2);*/
+    background: grey;
+    mix-blend-mode: overlay;
+}
+.text-intro {
+    position: relative;
+    z-index: 10;
+}
+
+.text-intro h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text-intro h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text-intro p {
+    font-size: 1.4em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+.text-intro a {
+    display: inline-block;
+    font-size: 1em;
+    background: #ffffff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.text-intro a:hover {
+    letter-spacing: 6px;
+}
+
+.social-intro {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+
+}
+.social-intro li {
+    list-style: none;
+}
+.social-intro li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+.social-intro li a:hover {
+    transform: scale(0.5) translateY(-10px);
+}
+
+.menu-intro {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-intro ul{
+    position: relative;
+    list-style: none;
+}
+
+.menu-intro ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111111;
+}
+
+.menu-intro ul li a:hover {
+    color: var(--overlay-color);
+}
+
+@media(max-width: 991px) {
+    .showcase-intro .showcase-intro header {
+        padding: 40px
+    }
+    .text-intro h2 {
+        font-size: 3em;
+    }
+    .text-intro h3 {
+        font-size: 2em;
+    }
 }
