@@ -72,7 +72,7 @@ body {
 @media screen and (max-width: 991px){
     .portfolio-items-wrapper{
     grid-template-columns:repeat(auto-fit, minmax(480px, 1fr));
-}
+    }
 }
 
 .portfolio-item-wrapper {
@@ -80,7 +80,7 @@ body {
 }
 
 .portfolio-img-background {
-    height: 350px;
+    height: 400px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -96,6 +96,7 @@ body {
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-left: 100px;
     padding-right: 100px;
     margin-left: auto;
     margin-right: auto;
