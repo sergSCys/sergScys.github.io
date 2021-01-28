@@ -5,7 +5,7 @@
 }
 
 
-/* Portfolio and About me pages: */
+/* Portfolio, About, and Contact me pages: */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -63,17 +63,44 @@ body {
     color: black; !important;
 }
 
-/* PORTFOLIO STYLES */
-
-.portfolio-items-wrapper {
-    display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(600px, 1fr));
+/* PORTFOLIO STYLES Responsive */
+@media (min-width:320px)  {
+    /* smartphones, iPhone, portrait 480x320 phones */
 }
-@media screen and (max-width: 991px){
-    .portfolio-items-wrapper{
-    grid-template-columns:repeat(auto-fit, minmax(480px, 1fr));
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
     }
 }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
+    }
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
+    }
+}
+/*@media (min-width:1025px) { !* big landscape tablets, laptops, and desktops *!*/
+/*    .portfolio-items-wrapper {*/
+/*        display: grid;*/
+/*        grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));*/
+/*    }*/
+/*}*/
+@media (min-width:1400px) { /* hi-res laptops and desktops */
+    .portfolio-items-wrapper {
+        display: grid;
+        grid-template-columns:repeat(auto-fit, minmax(680px, 1fr));
+    }
+}
+/*.portfolio-items-wrapper {*/
+/*    display: grid;*/
+/*    grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));*/
+/*}*/
 
 .portfolio-item-wrapper {
     position: relative;
@@ -126,6 +153,8 @@ body {
     transition: 1s;
     filter: brightness(10%);
 }
+
+
 /* About me Page */
 .two-column-wrapper {
     display: grid;
