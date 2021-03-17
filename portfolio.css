@@ -78,6 +78,7 @@ body {
         display: grid;
         grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));
     }
+
 }
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
     .portfolio-items-wrapper {
@@ -97,6 +98,42 @@ body {
         grid-template-columns:repeat(auto-fit, minmax(680px, 1fr));
     }
 }
+
+    /* About me Page */
+    .two-column-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+    }
+    /* Profile photo image width */
+@media (min-width: 720px) {
+    .profile-image-wrapper img {
+        width: 400px;
+    }
+
+
+    .profile-image-wrapper {
+        text-align: right;
+    }
+}
+@media (max-width: 719px) {
+
+    .profile-image-wrapper img {
+        width: 350px;
+    }
+    .profile-image-wrapper {
+        text-align: center;
+    }
+}
+    .profile-content-wrapper {
+        padding: 30px;
+    }
+
+    .profile-content-wrapper h1 {
+        color: lightseagreen;
+    }
+
+
 /*.portfolio-items-wrapper {*/
 /*    display: grid;*/
 /*    grid-template-columns:repeat(auto-fit, minmax(500px, 1fr));*/
@@ -154,23 +191,6 @@ body {
     filter: brightness(10%);
 }
 
-
-/* About me Page */
-.two-column-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-.profile-image-wrapper img {
-    width: 100%;
-}
-
-.profile-content-wrapper {
-    padding: 30px;
-}
-.profile-content-wrapper h1 {
-    color: lightseagreen;
-}
-
 /* Intro Landing VIDEO Page part: */
 
 * {
@@ -215,7 +235,7 @@ body {
     text-transform: uppercase;
     cursor: pointer;
 }
-
+/* Index menu show - hide(close) */
 .toggle-intro {
     position: relative;
     width: 60px;
@@ -246,6 +266,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+
 /* FOLLOWING LINES ADDS FILTER OVER VIDEO */
     /*background: rgba(0, 0, 0, 0.2);*/
     background: grey;
@@ -351,11 +372,4 @@ body {
     .text-intro h3 {
         font-size: 2em;
     }
-}
-
-.contact{
-    margin-left: 25px;
-}
-.contact_email{
-    margin-left: 25px;
 }
